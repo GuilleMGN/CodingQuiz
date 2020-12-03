@@ -6,51 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
     <h1>Welcome to the CODING QUIZ!</h1>
-
     <h2>Rules: Answer each multiple choice <br> question before the timer runs out! </h2>
-
     <div style="text-align:center">
-        <button id="start-button">Start</button>
+        <button id="start-button" href="questions.html">Start</button>
     </div>
-    <!-- I had to put the script timer here because js file didnt respond yet for some reason -->
-    <script>
-        document.getElementById("start-button").addEventListener("click", startTimer);
-
-        function startTimer() {
-            // TIMER
-            var timeleft = 75;
-            var downloadTimer = setInterval(function () {
-                document.getElementById("start-button").disabled = true;
-                if (timeleft <= 0) {
-                    clearInterval(downloadTimer);
-                    document.getElementById("countdown").innerHTML = "Finished";
-                }
-                else {
-                    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-                    console.log(timeleft);
-                }
-                timeleft--;
-            }, 1000);
-        }
-    </script>
-
     <h3>You have 75 seconds to answer 10 questions! </h3>
-
     <h4>When you feel ready, press start! </h4>
-
     <div style="text-align:center">
         <a href="highscores.html">Highscores</a>
     </div>
+    <!-- <p id="countdown"></p> -->
+    <script src="./script.js"></script>
 
-    <p id="countdown"></p>
-
-
-    <script href="./script.js"></script>
 </body>
 
 </html>

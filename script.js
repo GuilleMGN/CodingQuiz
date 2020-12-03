@@ -3,10 +3,8 @@
 
 // var secondsDisplay = document.createElement("p");
 
+document.getElementById("start-button").addEventListener("click", function() {
+    window.location.href = "questions.html";
+});
 
-
-document.getElementById("myBtn").addEventListener("click", myFunction);
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
+        
