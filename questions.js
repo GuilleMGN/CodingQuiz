@@ -1,3 +1,4 @@
+// COUNTDOWN TIMER
 var countdown = document.getElementById("countdown");
 var timeleft = 75;
 
@@ -14,7 +15,6 @@ function startTimer() {
         }
     }, 1000);
 }
-// endQuiz();
 // Invoke the timer function
 startTimer();
 
@@ -23,13 +23,13 @@ startTimer();
 var questions = [
     {   // Question 1
         title: "What are the 3 building blocks of a webpage? ",
-        choices: ["HTML, CSS, JS", "GitHub, GitLab, GitBash", "Head, Body, Footer", "String, Number, Boolean"],
+        choices: ["HTML, CSS, JS", "GitHub, GitLab, GitBash", "Header, Body, Footer", "String, Number, Boolean"],
         answer: "HTML, CSS, JS"
     },
     {   // Question 2
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        answer: "parentheses"
+        title: "Inside which HTML element can we put JavaScript code? ",
+        choices: ["<javascript>", "<code>", "<script>", "<js>"],
+        answer: "<script>"
     },
     {   // Question 3
         title: "Arrays in JavaScript can be used to store ____.",
@@ -37,14 +37,14 @@ var questions = [
         answer: "all of the above"
     },
     {   // Question 4
-        title: "String values must be enclosed within ____ when being assigned to variables.",
-        choices: ["commas", "curly brackets", "quotes", "parentheses"],
-        answer: "quotes"
+        title: "What does CSS stand for? ",
+        choices: ["Computer Style Sheets", "Colorful Style Sheets", "Cascading Style Sheets", "Coding Style Section"],
+        answer: "Cascading Style Sheets"
     },
     {   // Question 5
-        title: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
-        answer: "console.log"
+        title: "Which option is NOT an HTML DOM method?",
+        choices: ["addEventListener()", "getElementById()", "createElement()", "console.log()"],
+        answer: "console.log()"
     }
 ];
 
@@ -77,70 +77,46 @@ function runQuestions() {
     // Run function to check answer based on what question index we are on
     if (questionIndex == 0) {
         question1();
-        console.log(answerIsCorrect);
     }
     else if (questionIndex == 1) {
         question2();
-        console.log(answerIsCorrect);
     }
     else if (questionIndex == 2) {
         question3();
-        console.log(answerIsCorrect);
     }
     else if (questionIndex == 3) {
         question4();
-        console.log(answerIsCorrect);
     }
     else if (questionIndex == 4) {
         question5();
-        console.log(answerIsCorrect);
     }
 } // End runQuestions();
 
 // Invoke the initial questions function
 runQuestions();
 
-// Add button that will run questions again
-document.getElementById("next-button").addEventListener("click", function () {
-    // Conditional if we ran out of questions
-    // if (questionIndex === questions.length) {
-    //     endQuiz();
-    // }
-    // else {
-    //     runQuestions();
-    //     questionIndex++;
-    // }
-});
-// function User(score, name) {
-//     this.score = score;
-//     this.name = name;
-// }
 function endQuiz() {
     var initials = prompt("Quiz over! Your score was " + (timeleft + 1) + "! Please enter your initials: ");
-    window.location.href = "highscores.html";
-    saveHighScore();
-    // if (users.length == 0) {
-    //         users.push(newUser);
-    //         window.localStorage.setItem("highscores", JSON.stringify(users));
-    // }
-    // else {
-    // }
+    if (initials != "") {
+        saveHighScore(initials);
+    }
 }
-function saveHighScore() {
+
+function saveHighScore(initials) {
 
     // get saved scores from localstorage, or if not any, set to empty array
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 
     // format new score object for current user
     var newScore = {
-        score: time,
+        score: timeleft,
         initials: initials
     };
     // save to localstorage
     highscores.push(newScore);
-    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscores));
     // redirect to next page
-    window.location.href = "highscores.html";
+    location.href = "highscores.html";
 }
 
 

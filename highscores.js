@@ -1,18 +1,22 @@
 function outputHighscore() {
+
     // var users = JSON.parse(window.localStorage.getItem("highscores")) || [];
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
     // alert("This works");
+    // Create for loop, in that loop create document.createElement <li> tags console.log highscore page, make sure you can append anything into that ul create test
     highscores.sort(function (a, b) {
         return b.score - a.score;
     });
-    highscores.forEach(function(score) {
-        // create li tag for each high score
-        var li = document.createElement("li");
-        li.textContent = score.timeleft + " | " + score.initials;
-        // display on page
-        var ul = document.getElementById("highscores");
-        ul.appendChild(li);
-      });
+    highscores.forEach(function (score) {
+        if (score.initials != null) {
+            // create li tag for each high score
+            var li = document.createElement("li");
+            li.textContent = (score.score + 1) + " | " + score.initials;
+            // display on page
+            var ul = document.getElementById("highscores");
+            ul.appendChild(li);
+        }
+    });
 
     // var li = document.createElement("li");
     // li.textContent = score.timeleft + " | " + score.initials;

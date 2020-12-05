@@ -95,9 +95,8 @@ li {
     opacity: 1;
 }
 .hs {
-    text-align: left;
-    display: inline-block;
-    padding: 15px;
+    float: right;
+    padding: 5px;
     background-color: orange;
     opacity: 0.6;
 }
