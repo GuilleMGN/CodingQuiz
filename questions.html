@@ -4,20 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>Coding Quiz Questions</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>Question 1</h1>
-    <h2>You will be penalized <br> -10s for every wrong answer </h2>
-    <h3>You have 75 seconds to answer 10 questions! </h3>
-    <p id="countdown"></p>
+    <h1>Question <span id="question-number"></span>:</h1>
+    <h2 id="question-title"></h2>
+        <ul id="options">
+            <button class="btn" id="btn1">A</button>
+            <li id="option1"></li>
+            <button class="btn" id="btn2">B</button>
+            <li id="option2"></li>
+            <button class="btn" id="btn3">C</button>
+            <li id="option3"></li>
+            <button class="btn" id="btn4">D</button>
+            <li id="option4"></li>
+        </ul>
+        
 
+    <h3 id="computer"></h3>
 
+    <div style="text-align:center">
+        <button id="next-button">Skip</button>
+    </div>
 
-    <script src="/questions.js"></script>
+    <p>Time Left: <span id="countdown"></span>s</p>
 
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
 </body>
 
 </html>

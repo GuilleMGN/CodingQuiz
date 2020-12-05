@@ -36,7 +36,72 @@ a {
     font-size: 25px;
     margin-top: 30px;
 }
+p {
+    text-align: center;
+}
 #countdown {
     font-size: 30px;
     text-align: center;
+}
+ul {
+    font-size: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    list-style-type: none;
+}
+li {
+    padding: 10px;
+    background-color: orange;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#next-button {
+    background-color: rgb(15, 136, 15);
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+    border: black;
+    border-style: ridge;
+    cursor: pointer;
+    opacity: 0.6;
+    margin-top: 30px;
+}
+#next-button:hover {
+    opacity: 1; 
+}
+#option1 {
+    text-align: center;
+}
+#option2 {
+    text-align: center;
+}
+#option3 {
+    text-align: center;
+}
+#option4 {
+    text-align: center;
+}
+.btn {
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    padding: 15px;
+    background-color: orange;
+    opacity: 0.6;
+}
+.btn:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.hs {
+    text-align: left;
+    display: inline-block;
+    padding: 15px;
+    background-color: orange;
+    opacity: 0.6;
+}
+.hs:hover {
+    cursor: pointer;
+    opacity: 1;
 }
