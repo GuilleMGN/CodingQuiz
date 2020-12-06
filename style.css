@@ -1,14 +1,18 @@
+/* Darkens background color */
 body {
     background-color: rgb(214, 214, 214);
 }
+/* Webpage Title */
 h1 {
     text-align: center;
     margin-top: 30px;
 }
+/* Specifies webpage */
 h2 {
     text-align: center;
     margin-top: 30px;
 }
+/* Main index page start button */
 #start-button {
     background-color: rgb(79, 79, 221);
     color: white;
@@ -21,67 +25,53 @@ h2 {
     opacity: 0.6;
     margin-top: 30px;
 }
+/* Increases button visibility when hovered */
 #start-button:hover {
     opacity: 1; 
 }
+/* Tips */
 h3 {
     text-align: center;
     margin-top: 30px;
 }
+/* Extra tips */
 h4 {
     text-align: center;
     margin-top: 30px;
 }
+/* Link to and from index/highscores HTML using <a> tag*/
 a {
     font-size: 25px;
     margin-top: 30px;
+    margin: 15px;
 }
+/* Timer display to center of screen */
 p {
     text-align: center;
 }
+/* Seconds of the timer */
 #countdown {
     font-size: 30px;
     text-align: center;
 }
+/* Unordered list properties */
 ul {
     font-size: 25px;
-    margin-left: 25%;
-    margin-right: 25%;
     list-style-type: none;
 }
+/* List elements for questions and highscores */
 li {
     padding: 10px;
     background-color: orange;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: -25px;
 }
-#next-button {
-    background-color: rgb(15, 136, 15);
-    color: white;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 30px;
-    border: black;
-    border-style: ridge;
-    cursor: pointer;
-    opacity: 0.6;
-    margin-top: 30px;
-}
-#next-button:hover {
-    opacity: 1; 
-}
-#option1 {
+/* Aligns all <li> option elements to the center */
+.optionLi {
     text-align: center;
 }
-#option2 {
-    text-align: center;
-}
-#option3 {
-    text-align: center;
-}
-#option4 {
-    text-align: center;
-}
+/* Option button properties */
 .btn {
     text-align: left;
     display: inline-block;
@@ -89,17 +79,20 @@ li {
     padding: 15px;
     background-color: orange;
     opacity: 0.6;
+    margin-left: -25px;
 }
+/* Increases button visibility when hovered */
 .btn:hover {
     cursor: pointer;
     opacity: 1;
 }
+/* Clear highscores button properties */
 .hs {
     float: right;
-    padding: 5px;
     background-color: orange;
     opacity: 0.6;
 }
+/* Increases button visibility when hovered */
 .hs:hover {
     cursor: pointer;
     opacity: 1;

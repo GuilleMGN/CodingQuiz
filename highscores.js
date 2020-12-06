@@ -1,46 +1,28 @@
+// Function to output highscores from our Local Storage
 function outputHighscore() {
-
-    // var users = JSON.parse(window.localStorage.getItem("highscores")) || [];
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-    // alert("This works");
-    // Create for loop, in that loop create document.createElement <li> tags console.log highscore page, make sure you can append anything into that ul create test
+    // Create loop that will create new <li> element tags to output/append on highscore page
     highscores.sort(function (a, b) {
         return b.score - a.score;
     });
     highscores.forEach(function (score) {
         if (score.initials != null) {
-            // create li tag for each high score
+            // Create li tag for each high score
             var li = document.createElement("li");
             li.textContent = (score.score + 1) + " | " + score.initials;
-            // display on page
+            // Display on page
             var ul = document.getElementById("highscores");
             ul.appendChild(li);
         }
     });
-
-    // var li = document.createElement("li");
-    // li.textContent = score.timeleft + " | " + score.initials;
-
-    // var highscores = document.getElementById("highscores");
-    // highscores.appendChild(li);
-    // // console.log(timeleft + " | " + initials);
-    // // alert(initials);
-    // var newUser = new User(timeleft, initials);
-
-    // var liTag = document.createElement("li");
-    // liTag.textContent = score.initials + " - " + score.score;
-
-    // // display on page
-    // var olEl = document.getElementById("highscores");
-    // olEl.appendChild(liTag);
 }
-
+// Function to clear all highscores from the highscore list
 function clearHighscore() {
     highscores.innerHTML = "";
     window.localStorage.removeItem("highscores");
     window.location.reload();
 }
-
+// When clear button is clicked, run the clearHighscore() function
 document.getElementById("clear").onclick = clearHighscore;
-
+// Invoke the outputHighscore() function instantly upon page load
 outputHighscore();

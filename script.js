@@ -3,25 +3,29 @@ document.getElementById("start-button").addEventListener("click", function () {
     window.location.href = "questions.html";
 });
 
-// Answer logic
+// Answer logic deterrmined by functions and conditionals
+// These three functions will only be called in Event Listeners
+// If button click is correct, increase question index count and move on
 function correct() {
     computer.textContent = "Correct! ";
     computer.style.color = "green";
     questionIndex++;
     runQuestions();
 }
+// If button click is incorrect, penalize time -10s
 function wrong() {
     computer.textContent = " Wrong! -10s ";
     computer.style.color = "red";
     timeleft -= 10;
 }
+// If final button click is correct, end the quiz
 function final() {
     computer.textContent = " Correct! ";
     computer.style.color = "green";
     questionIndex++;
     endQuiz();
 }
-// MAKE IF STATEMENTS IF QUESTION INDEX == NUMBER THEN RUN FUNCTION1 FOR 1 OR FCTN 2 FOR 2 UP TO 5, WHEN IT HITS 6 THEN END QUIZ
+// These functions are invoked in questions.js which run depending on what question we are on
 // Answer for Question 1 is A (option 1)
 function question1() {
     if (option1.textContent == questions[0].answer) {
@@ -91,32 +95,4 @@ function question5() {
     btn2.addEventListener("click", wrong);
     btn3.addEventListener("click", wrong);
 }
-
-// VV-- INCASE EVERYTHING GOES ABSOLUTELY WRONG --VV
-// function question5() {
-//     answerIsCorrect = true;
-//     btn1.addEventListener("click", function () {
-//         answerIsCorrect = false;
-//         computer.textContent = " Wrong! -10s";
-//         computer.style.color = "red";
-//     })
-//     btn2.addEventListener("click", function () {
-//         answerIsCorrect = false;
-//         computer.textContent = " Wrong! -10s";
-//         computer.style.color = "red";
-//     })
-//     btn3.addEventListener("click", function () {
-//         answerIsCorrect = false;
-//         computer.textContent = " Wrong! -10s";
-//         computer.style.color = "red";
-//     })
-//     btn4.addEventListener("click", function () {
-//         if (option4.textContent == questions[4].answer) {
-//             answerIsCorrect = true;
-//             computer.textContent = "Correct! ";
-//             computer.style.color = "green";
-//             questionIndex++;
-//             endQuiz();
-//         }
-//     })
-// }
+// End functions
