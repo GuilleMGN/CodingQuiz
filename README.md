@@ -20,7 +20,11 @@ They are sorted into the order for the person with the greatest score to be on t
 doesnt input any characters, it will not be displayed on the leaderboard because the empty array returned a null value. There is a clear button 
 that deletes the local storages items array. Finally, I used my own css for some styling and included bootstrap for a neat responsive layout. 
 
-Screenshots of the webpage can be found at (./Assets/image.png)
+## Screenshots
+![index](https://user-images.githubusercontent.com/73862470/101269246-fd2abf00-373a-11eb-9161-883383b3f889.PNG)
+![questions](https://user-images.githubusercontent.com/73862470/101269247-fd2abf00-373a-11eb-9782-906fb38df491.PNG)
+![highscores](https://user-images.githubusercontent.com/73862470/101269248-fdc35580-373a-11eb-8dfb-58145620b87c.PNG)
 
+## URLs
 URL to GitHub Repository: https://github.com/GuilleMGN/CodingQuiz 
 Live webpage URL: https://guillemgn.github.io/CodingQuiz/index.html 
